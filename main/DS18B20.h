@@ -1,6 +1,5 @@
 #include <inttypes.h> 
 #include "onewire.h"
-
 #include "digital.h"
 #include "debug.h"
 
@@ -19,7 +18,5 @@ public:
 	void init (void);
 	void init (char v[]);
 	void fazScan(void);
-
-
-
+	uint8_t fazScan(char* vetor);
 };

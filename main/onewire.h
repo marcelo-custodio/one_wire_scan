@@ -31,8 +31,6 @@ public:
 	void config (gpio_num_t pino);
 	uint8_t reset (void);
 	uint8_t readBit(void);
-	uint8_t fazScan(char* vetor);
-
 };
 
 #endif

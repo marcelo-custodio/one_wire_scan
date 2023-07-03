@@ -43,9 +43,14 @@ void app_main()
  char v2[]={112,3,24,151,121,69,116,40};
  
     //meuSensor.init(v);
-    
- meuSensor.fazScan();
 
+  char vetor[8*8] = {0};
+  uint8_t qtde_sensores = meuSensor.fazScan(vetor);
+  printf("Numero de sensores: %d\n",qtde_sensores);
+  for (uint8_t x=0;x<qtde_sensores*8;x++) {
+    if (x % 8 == 0) printf("\n");
+    printf("%d\n",vetor[x]);
+  }
  /*   while(1){
       
       temperatura1 = meuSensor.readTargetTemp(v1);
